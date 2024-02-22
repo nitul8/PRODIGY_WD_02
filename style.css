@@ -72,6 +72,12 @@ body {
   margin: 20px;
 }
 
+.btn:hover {
+  background-color: #b8c4bb;
+  color: #fff;
+  border-color: #fff;
+  transition-duration: 0.5s;
+}
 .reset {
   display: flex;
   justify-content: center;
