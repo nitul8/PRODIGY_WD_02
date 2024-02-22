@@ -18,3 +18,7 @@
   font-style: normal;
   box-sizing: border-box;
 }
+
+body {
+  background: var(--bkgrndClr1);
+}
