@@ -27,7 +27,6 @@ body {
   grid-template-rows: repeat(1fr, 3);
   justify-content: center;
   align-items: center;
-  min-width: 200px;
   border: 0.2px solid black;
   border-radius: 10px;
 }
@@ -59,6 +58,9 @@ body {
 }
 
 .click {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .btn {
@@ -68,4 +70,10 @@ body {
   background-color: white;
   border-color: #000;
   margin: 20px;
+}
+
+.reset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
