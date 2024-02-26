@@ -9,39 +9,24 @@
     <body class="light">
         <div class="container">
             <div class="time">
-                <div class="text">00 : 00 : 00 : 000</div>
+                <div class="hms">00 : 00 : 00 : 000</div>
             </div>
             <div class="click">
-                <button id="pause" class="btn">
+                <button id="pause" class="btn" onclick="pause()">
                     <i class="fa-solid fa-pause"></i>
                 </button>
-                <button id="play" class="btn">
+                <button id="play" class="btn" onclick="play()">
                     <i class="fa-solid fa-play"></i>
                 </button>
-                <button id="lap" class="btn">
+                <button id="lap" class="btn" onclick="lap()">
                     <i class="fa-solid fa-flag"></i>
                 </button>
             </div>
-            <ul class="laps hidden">
-                <li class="lap-items">
-                    <span class="number">1.</span>
-                    <span class="time-stamp">01 : 22 : 33 : 444</span>
-                </li>
-                <li class="lap-items">
-                    <span class="number">2.</span>
-                    <span class="time-stamp">01 : 22 : 33 : 444</span>
-                </li>
-                <li class="lap-items">
-                    <span class="number">3.</span>
-                    <span class="time-stamp">01 : 22 : 33 : 444</span>
-                </li>
-                <li class="lap-items">
-                    <span class="number">4.</span>
-                    <span class="time-stamp">01 : 22 : 33 : 444</span>
-                </li>
+            <ul class="laps">
+                <li class="view"></li>
             </ul>
             <div class="reset">
-                <button id="reset" class="btn">
+                <button id="reset" class="btn" onclick="reset()">
                     <i class="fa-solid fa-rotate-right"></i>
                 </button>
             </div>

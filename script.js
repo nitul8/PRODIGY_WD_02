@@ -1,43 +1,68 @@
-let [msec, sec, min, hour] = [0, 0, 0, 0];
-let timeRef = document.querySelector(".text");
-let int = null;
+let [ms, s, m, h] = [0, 0, 0, 0];
+let timer = null;
 
-document.getElementById("play").addEventListener("click", () => {
-    if (int !== null) {
-        clearInterval(int);
+let display = document.querySelector(".hms");
+let laps = document.querySelector(".laps");
+
+function play() {
+    if (!timer) {
+        timer = setInterval(run, 10);
     }
-    int = setInterval(displayTimer, 10);
-});
+}
 
-document.getElementById("pause").addEventListener("click", () => {
-    clearInterval(int);
-});
-
-document.getElementById("reset").addEventListener("click", () => {
-    clearInterval(int);
-    [msec, sec, min, hour] = [0, 0, 0, 0];
-    timeRef.innerHTML = "00 : 00 : 00 : 000 ";
-});
-
-function displayTimer() {
-    msec += 10;
-    if (msec == 1000) {
-        msec = 0;
-        sec++;
-        if (sec == 60) {
-            sec = 0;
-            min++;
-            if (min == 60) {
-                min = 0;
-                hour++;
-            }
-        }
+function run() {
+    display.innerHTML = getTimer();
+    ms += 10;
+    if (ms == 1000) {
+        ms = 0;
+        s++;
     }
+    if (s == 60) {
+        s = 0;
+        m++;
+    }
+    if (m == 60) {
+        m = 0;
+        h++;
+    }
+}
 
-    let h = hour < 10 ? "0" + hour : hour;
-    let m = min < 10 ? "0" + min : min;
-    let s = sec < 10 ? "0" + sec : sec;
-    let ms = msec < 10 ? "00" + msec : msec < 100 ? "0" + msec : msec;
+function getTimer() {
+    return (
+        (h < 10 ? "0" + h : h) +
+        " : " +
+        (m < 10 ? "0" + m : m) +
+        " : " +
+        (s < 10 ? "0" + s : s) +
+        " : " +
+        (ms < 10 ? "00" + ms : ms < 100 ? "0" + ms : ms)
+    );
+}
 
-    timeRef.innerHTML = `${h} : ${m} : ${s} : ${ms}`;
+function pause() {
+    stopTimer();
+}
+
+function stopTimer() {
+    clearInterval(timer);
+    timer = null;
+}
+
+function reset() {
+    stopTimer();
+    ms = 0;
+    s = 0;
+    m = 0;
+    h = 0;
+    display.innerHTML = getTimer();
+    laps.innerHTML = "";
+}
+
+function lap() {
+    if (timer) {
+        var li = document.createElement("li");
+        li.classList.add("text");
+        li.innerHTML = getTimer();
+        laps.appendChild(li);
+    }
 }
