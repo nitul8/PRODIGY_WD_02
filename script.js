@@ -66,4 +66,3 @@ function lap() {
         laps.appendChild(li);
     }
 }
-return 0;
