@@ -1,36 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PRODIGY_WD_02</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body class="light">
-    <div class="container">
-      <div class="time">
-        <span class="text hour">01 : </span>
-        <span class="text minute">23 : </span>
-        <span class="text second">45 : </span>
-        <span class="text milisecond">678</span>
-      </div>
-      <div class="click">
-        <button id="pause" class="btn">
-          <i class="fa-solid fa-pause"></i>
-        </button>
-        <button id="play" class="btn"><i class="fa-solid fa-play"></i></button>
-        <button id="lap" class="btn"><i class="fa-solid fa-flag"></i></button>
-      </div>
-      <div class="reset">
-        <button id="reset" class="btn">
-          <i class="fa-solid fa-rotate-right"></i>
-        </button>
-      </div>
-    </div>
-    <script src="script.js"></script>
-    <script
-      src="https://kit.fontawesome.com/d5a3030297.js"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>PRODIGY_WD_02</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body class="light">
+        <div class="container">
+            <div class="time">
+                <div class="text">00 : 00 : 00 : 000</div>
+            </div>
+            <div class="click">
+                <button id="pause" class="btn">
+                    <i class="fa-solid fa-pause"></i>
+                </button>
+                <button id="play" class="btn">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+                <button id="lap" class="btn">
+                    <i class="fa-solid fa-flag"></i>
+                </button>
+            </div>
+            <ul class="laps hidden">
+                <li class="lap-items">
+                    <span class="number">1.</span>
+                    <span class="time-stamp">01 : 22 : 33 : 444</span>
+                </li>
+                <li class="lap-items">
+                    <span class="number">2.</span>
+                    <span class="time-stamp">01 : 22 : 33 : 444</span>
+                </li>
+                <li class="lap-items">
+                    <span class="number">3.</span>
+                    <span class="time-stamp">01 : 22 : 33 : 444</span>
+                </li>
+                <li class="lap-items">
+                    <span class="number">4.</span>
+                    <span class="time-stamp">01 : 22 : 33 : 444</span>
+                </li>
+            </ul>
+            <div class="reset">
+                <button id="reset" class="btn">
+                    <i class="fa-solid fa-rotate-right"></i>
+                </button>
+            </div>
+        </div>
+        <script src="script.js"></script>
+        <script
+            src="https://kit.fontawesome.com/d5a3030297.js"
+            crossorigin="anonymous"
+        ></script>
+    </body>
 </html>
