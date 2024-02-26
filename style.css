@@ -42,7 +42,7 @@ body {
 }
 
 .hour {
-  font-size: 38px;
+  font-size: 33px;
 }
 
 .minute {
@@ -50,11 +50,11 @@ body {
 }
 
 .second {
-  font-size: 28px;
+  font-size: 33px;
 }
 
 .milisecond {
-  font-size: 23px;
+  font-size: 33px;
 }
 
 .click {
